@@ -6,8 +6,8 @@ body {
 }
 
 #root {
-  width:100vw;
-  height:600vh;
+  width: 100vw;
+  height: 600vh;
   border: 1px solid black;
   display: flex;
   align-items: center;
@@ -16,60 +16,115 @@ body {
 }
 
 #intro {
-  width:100vw;
-  height:100vh;
+  width: 100vw;
+  height: 100vh;
   background-color: #161021;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
-#intro > p {
+#neon {
   font-size: 120px;
   letter-spacing: 7px;
   text-align: center;
   transform: rotate(-25deg);
-  color: #00FF19;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #00ff19#00FF19, 0 0 102px #00FF19, 0 0 151px #00FF19;
+   animation: flicker 1.5s infinite;
+}
+
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+      0 0 80px #00FF19, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
 }
 
 #hamBtn {
-  position : absolute;
-  width:50px;
-  height:50px;
-  right:20px;
-  top:60px;
+  /* position : absolute; */
+  width: 45px;
+  height: 45px;
+  right: 20px;
+  top: 60px;
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border:2px solid white;
+  justify-content: space-evenly;
+  border: 2px solid white;
   border-radius: 60%;
+  flex-direction: column;
+  box-shadow: 0 0 7px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #00FF19,
+    0 0 3px #00FF19, 0 0 92px #00FF19, 0 0 1px #00FF19, 0 0 5px #00FF19;
 }
 
-#hamBtn > span {
-  position : absolute;
-  left : 30;
-  width:35px;
-  height:6px;
+#hamBtn>span {
+  /* position : absolute; */
+  /* left : 30; */
+  width: 33px;
+  height: 5px;
   background-color: #00FF19;
   border-radius: 6px;
-}
-
-#hamBtn > span:nth-child(1) {
-  top : 20;
-}
-
-#hamBtn > span:nth-child(2) {
-  top : 10px;
-}
-
-#hamBtn > span:nth-child(3) {
-  top:35px;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 2px #fff, 0 0 4px #00FF19,
+    0 0 3px #00FF19, 0 0 9px #00FF19, 0 0 1px #00FF19, 0 0 5px #00FF19;
 }
 
 #about {
-  width:100vw;
-  height:100vh;
+  width: 100vw;
+  height: 100vh;
   background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#profile {
+  width: 70vw;
+  height: 40vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+/* 화면 작아지면 세로로, */
+#profile>div {
+  width: 30vw;
+  height: 40vh;
+  border: 1px solid black;
+}
+
+#img {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#circle {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+#info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
