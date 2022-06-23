@@ -1,0 +1,54 @@
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px rgb(65, 134, 111),
+      0 0 80px #00FF19, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes flickerBox {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    box-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 20px #af2ca9,
+      0 0 8px #af2ca9, 0 0 40px #af2ca9, 0 0 10px #ff04f2, 0 0 15px #ff04f2;
+  }
+  20%,
+  24%,
+  55% {
+    box-shadow: none;
+  }
+}
+
+@keyframes flickerBox2 {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    box-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 20px rgb(206, 30, 6),
+      0 0 8px #da2727, 0 0 40px #e94918, 0 0 10px #ff0000, 0 0 15px #cac036;
+  }
+  20%,
+  24%,
+  55% {
+    box-shadow: none;
+  }
+  
+}

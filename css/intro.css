@@ -30,30 +30,20 @@ body {
   text-align: center;
   transform: rotate(-25deg);
   color: #fff;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #00ff19#00FF19, 0 0 102px #00FF19, 0 0 151px #00FF19;
-   animation: flicker 1.5s infinite;
-}
-
-@keyframes flicker {
-  0%,
-  18%,
-  22%,
-  25%,
-  53%,
-  57%,
-  100% {
-    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
-      0 0 80px #00FF19, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+  text-shadow: 0 0 6px #fff, 0 0 7px #fff, 0 0 2px #fff, 0 0 4px #00ff19#00FF19, 0 0 1px #00FF19, 0 0 1px #00FF19;
+   animation: flicker 2.5s infinite;
+   font-family: 'Road_Rage';
   }
-  20%,
-  24%,
-  55% {
-    text-shadow: none;
+  
+  @font-face {
+    font-family: 'Road_Rage';
+    src: url('./font/Road_Rage.woff') format('woff');
   }
-}
 
-#hamBtn {
-  /* position : absolute; */
+
+
+
+ /* #hamBtn {
   width: 45px;
   height: 45px;
   right: 20px;
@@ -67,64 +57,64 @@ body {
   flex-direction: column;
   box-shadow: 0 0 7px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #00FF19,
     0 0 3px #00FF19, 0 0 92px #00FF19, 0 0 1px #00FF19, 0 0 5px #00FF19;
-}
+    cursor: pointer;
+}  */
 
-#hamBtn>span {
-  /* position : absolute; */
-  /* left : 30; */
+/* #hamBtn>span {
   width: 33px;
   height: 5px;
   background-color: #00FF19;
   border-radius: 6px;
   box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 2px #fff, 0 0 4px #00FF19,
     0 0 3px #00FF19, 0 0 9px #00FF19, 0 0 1px #00FF19, 0 0 5px #00FF19;
-}
+} */
 
-#about {
-  width: 100vw;
-  height: 100vh;
-  background-color: gray;
+.hamBtn {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity 25s ease; 
+  border: 1px solid white;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-#profile {
-  width: 70vw;
-  height: 40vh;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px;
-}
-
-/* 화면 작아지면 세로로, */
-#profile>div {
-  width: 30vw;
-  height: 40vh;
-  border: 1px solid black;
-}
-
-#img {
-  display: flex;
-  align-items: center;
+  justify-content: space-evenly;
   flex-direction: column;
-  justify-content: center;
 }
 
-#circle {
-  width: 150px;
-  height: 150px;
-  border: 1px solid black;
-  border-radius: 50%;
-  margin-top: 20px;
+.hamBtn {
+  opacity: 7;
 }
 
-#info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
+.hamBtn > span {
+  width:35px;
+  height:5px;
+  background-color: red;
+}
+
+.hamBop:active {
+  transform: translateY(11px) translateX(0) rotate(45deg);
+}
+
+.hamMid:active {
+  opacity:0;
+}
+.hamBottom:active {
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+}
+
+.fullscreen {
+  position: fixed;
+  background-color: yellow;
+  top:0;
+  left:0;
+  width:50%;
+  height:0%;
+  opacity:0;
+  visibility: hidden;
+  transition:opacity 35s; visibility: 35s; height:35s;
+  overflow:hidden;
 }

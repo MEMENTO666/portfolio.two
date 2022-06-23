@@ -13,30 +13,44 @@
     @import url("css/intro.css");
     @import url("css/about.css");
     @import url("css/menu.css");
+    @import url("css/keyframe.css");
   </style>
 </head>
 
 <body>
   <div id="root">
-   
+    <script type="module" src="./app.js"></script>
+
     <div id="intro">
-      <div id="hamBtn" href="#">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="hamBtn" id="toggle">
+          <span class="hamTop"></span>
+          <span class="hamMid"></span>
+          <span class="hambottom"></span>
       </div>
+
+      <div class="fullscreen">
+        <nav class="fullscreen-menu">
+          <ul>
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+          </ul>
+        </nav>
+      </div>
+
+
       <p id="neon">good to <span style="color:rgba(255, 255, 255, 0)">S</span>ee <br>
         <span id="Y" style="color :rgba(255, 249, 255, 0)">Y</span>ou</p>
-       
     </div>
     <div id="about">
       <div id="profile">
         <div id="img">
           <div id="circle"></div>
-          <p>1989.08.23~</p>
+          <h4>1989.08.23~</h4>
         </div>
         <div id="info">
-          <p><strong>Leesungyoon</strong></p>
+          <h3>Leesungyoon</h3>
           <p>010 6476 0000</p>
           <p>mementomorii666<br>@gmail.com</p>
         </div>
