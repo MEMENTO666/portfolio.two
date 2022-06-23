@@ -14,7 +14,7 @@ body {
   /* justify-content: center; */
   flex-direction: column;
 }
-
+          /* *************************intro 영역*************************************/
 #intro {
   width: 100vw;
   height: 100vh;
@@ -23,7 +23,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-
+          /* ********************intro 폰트 영역************************************ */
 #neon {
   font-size: 120px;
   letter-spacing: 7px;
@@ -31,22 +31,21 @@ body {
   transform: rotate(-25deg);
   color: #fff;
   text-shadow: 0 0 6px #fff, 0 0 7px #fff, 0 0 2px #fff, 0 0 4px #00ff19#00FF19, 0 0 1px #00FF19, 0 0 1px #00FF19;
-   animation: flicker 2.5s infinite;
-   font-family: 'Road_Rage';
-  }
+  animation: flicker 2.5s infinite;
+  font-family: 'Road_Rage';
+}
+
+@font-face {
+  font-family: 'Road_Rage';
+  src: url('./font/Road_Rage.woff') format('woff');
+}
   
-  @font-face {
-    font-family: 'Road_Rage';
-    src: url('./font/Road_Rage.woff') format('woff');
-  }
 
-
-
-
- /* #hamBtn {
-  width: 45px;
-  height: 45px;
-  right: 20px;
+          /* *********************햄버거 메뉴 버튼 영역******************************** */
+#hamBtn {
+  width: 50px;
+  height: 50px;
+  right: 50px;
   top: 60px;
   position: fixed;
   display: flex;
@@ -57,64 +56,14 @@ body {
   flex-direction: column;
   box-shadow: 0 0 7px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #00FF19,
     0 0 3px #00FF19, 0 0 92px #00FF19, 0 0 1px #00FF19, 0 0 5px #00FF19;
-    cursor: pointer;
-}  */
+  cursor: pointer;
+}
 
-/* #hamBtn>span {
+#hamBtn>span {
   width: 33px;
   height: 5px;
   background-color: #00FF19;
   border-radius: 6px;
   box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 2px #fff, 0 0 4px #00FF19,
     0 0 3px #00FF19, 0 0 9px #00FF19, 0 0 1px #00FF19, 0 0 5px #00FF19;
-} */
-
-.hamBtn {
-  position: fixed;
-  top: 5%;
-  right: 2%;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  z-index: 100;
-  transition: opacity 25s ease; 
-  border: 1px solid white;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
-}
-
-.hamBtn {
-  opacity: 7;
-}
-
-.hamBtn > span {
-  width:35px;
-  height:5px;
-  background-color: red;
-}
-
-.hamBop:active {
-  transform: translateY(11px) translateX(0) rotate(45deg);
-}
-
-.hamMid:active {
-  opacity:0;
-}
-.hamBottom:active {
-  transform: translateY(-11px) translateX(0) rotate(-45deg);
-}
-
-.fullscreen {
-  position: fixed;
-  background-color: yellow;
-  top:0;
-  left:0;
-  width:50%;
-  height:0%;
-  opacity:0;
-  visibility: hidden;
-  transition:opacity 35s; visibility: 35s; height:35s;
-  overflow:hidden;
 }
