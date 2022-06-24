@@ -28,7 +28,7 @@ body {
   font-size: 120px;
   letter-spacing: 7px;
   text-align: center;
-  transform: rotate(-25deg);
+  transform: rotate(-20deg);
   color: #fff;
   text-shadow: 0 0 6px #fff, 0 0 7px #fff, 0 0 2px #fff, 0 0 4px #00ff19#00FF19, 0 0 1px #00FF19, 0 0 1px #00FF19;
   animation: flicker 2.5s infinite;
@@ -38,6 +38,13 @@ body {
 @font-face {
   font-family: 'Road_Rage';
   src: url('./font/Road_Rage.woff') format('woff');
+}
+
+#fontY {
+  opacity : 0;
+}
+#fontS {
+  opacity: 0;
 }
   
 

@@ -18,7 +18,7 @@
   border-radius: 30px;
   box-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 2px #3fff04,
     0 0 3px #3fff04, 0 0 50px #3fff04, 0 0 1px #3fff04, 0 0 5px #3fff04;
-    animation: flickerBox 2s infinite;
+    animation: flickerBox 3s infinite;
     /* border: 1px solid black; */
 }
 /* 화면 작아지면 세로로, */
@@ -40,8 +40,8 @@
   border-radius: 50%;
   margin-top:20px;
   /* border: 1px solid black; */
-  animation: flickerBox2 1.5s infinite;
-  
+  box-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 2px rgba(230, 255, 1, 0.068),
+  0 0 3px #3fff044d, 0 0 50px rgba(60, 66, 4, 0.555), 0 0 1px rgba(230, 255, 1, 0.555), 0 0 5px #3c9122;
 }
 
 #info {
