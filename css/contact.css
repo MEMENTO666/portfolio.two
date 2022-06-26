@@ -1,0 +1,64 @@
+#contact {
+  width:100vw;
+  height:100vh;
+  background-color: #161021;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+}
+
+#profile {
+  width:70vw;
+  height:40vh;
+  /* background-color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  box-shadow:
+    0 0 2px #fff,
+    0 0 20px #fff,
+    0 0 2px #fff,
+    0 0 20px #ff0404,
+    0 0 30px #ff0404,
+    0 0 20px #ff0404,
+    0 0 20px #ff0404,
+    0 0 20px #ff0404;
+    animation: profileBox 2.5s infinite;
+    /* border: 1px solid black; */
+}
+/* 화면 작아지면 세로로, */
+#profile > div {
+  width:30vw;
+  height:40vh;
+  color: white;
+}
+
+#img {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#circle {
+  width:150px;
+  height:150px;
+  border-radius: 50%;
+  margin-top:20px;
+  /* border: 1px solid black; */
+  box-shadow:
+  0 0 8px #ffffff,
+  0 0 5px #fffefe,
+  0 0 20px #ffffff,
+  0 0 55px rgb(253, 2, 2)
+}
+
+#info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}

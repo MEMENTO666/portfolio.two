@@ -1,53 +1,94 @@
 #about {
   width:100vw;
   height:100vh;
-  background-color: #161021;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid white;
+  background-color: #161021;
 }
 
-#profile {
-  width:70vw;
-  height:40vh;
-  background-color: white;
+#backBoard {
+  width:85vw;
+  height:60vh;
+  border: 1px solid white;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 30px;
-  box-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 2px #3fff04,
-    0 0 3px #3fff04, 0 0 50px #3fff04, 0 0 1px #3fff04, 0 0 5px #3fff04;
-    animation: flickerBox 3s infinite;
-    /* border: 1px solid black; */
-}
-/* 화면 작아지면 세로로, */
-#profile > div {
-  width:30vw;
-  height:40vh;
+  justify-content: space-evenly;
 }
 
-#img {
+#backBoard > div {
+  width:35vw;
+  height:500px;
+}
+#dancer {
+  border: 1px solid white;
+}
+
+#introduce {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   flex-direction: column;
-  justify-content: center;
+
 }
 
-#circle {
-  width:150px;
-  height:150px;
-  border-radius: 50%;
-  margin-top:20px;
-  /* border: 1px solid black; */
-  box-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 2px rgba(230, 255, 1, 0.068),
-  0 0 3px #3fff044d, 0 0 50px rgba(60, 66, 4, 0.555), 0 0 1px rgba(230, 255, 1, 0.555), 0 0 5px #3c9122;
-}
-
-#info {
+#introduce > div {
+  width: 30vw;
+  height: 80px;
+  /* border: 1px solid white; */
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  color: white;
+  
+
+
+}
+
+#aboutBox1 {
+  animation: aboutBox1 3.5s infinite;
+  transform-style: preserve-3d;
+}
+#aboutBox2 {
+  animation: aboutBox2 3s infinite;
+  transform-style: preserve-3d;
+}
+#aboutBox3 {
+  animation: aboutBox3 3.2s infinite;
+  transform-style: preserve-3d;
+}
+#aboutBox4 {
+  animation: aboutBox4 4s infinite;
+  transform-style: preserve-3d;
+}
+
+
+
+
+#aboutBox_front {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#aboutBox_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  text-align: center;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#aboutBox_back > p {
+  transform: rotate(180deg);
 }
