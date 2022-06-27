@@ -12,44 +12,37 @@
   height:700px;
   border: 1px solid white;
   border-radius: 50%;
+  color : white;
+  position: absolute;
 }
 
-#rotatingTrack_circle1 {
-  width:120px;
-  height:120px;
-  background-color: red;
+#rotatingTrack > div {
+  width:150px;
+  height:150px;
+  border: 1px solid orange;
+  position: absolute;
   border-radius: 50%;
-  position: relative;
+  cursor: pointer;
+}
+
+
+#rotatingTrack_circle1 {
   top:40%;
   left:-50px;
 }
 
 #rotatingTrack_circle2 {
-  width:120px;
-  height:120px;
-  background-color: green;
-  border-radius: 50%;
-  position: relative;
-  top:23%;
+  top:40%;
   left:630px;
 }
 
 #rotatingTrack_circle3 {
-  width:120px;
-  height:120px;
-  background-color: blue;
-  border-radius: 50%;
-  position: relative;
-  top:-300px;
+  top:-60px;
   left:280px;
 }
 
 #rotatingTrack_circle4 {
-  width:120px;
-  height:120px;
-  background-color: orange;
-  border-radius: 50%;
-  position: relative;
-  bottom:-280px;
+  bottom:-60px;
   left:290px;
 }
+
