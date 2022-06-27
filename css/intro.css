@@ -3,10 +3,27 @@
 #intro {
   width: 100vw;
   height: 100vh;
-  background-color: #161021;
+  background-color: #0d0914;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#introSquare {
+  width: 50vw;
+  height:50vh;
+  position: absolute;
+  opacity: 0.8;
+  box-shadow:
+  0 0 2px #fff,
+  0 0 20px #fff,
+  0 0 2px #fff,
+  0 0 20px #04b0ff,
+  0 0 30px #04e2ff,
+  0 0 20px #04e2ff,
+  0 0 50px #7104ff;
+  animation:profileBox 1.5s infinite;
+  border-radius: 20px;
 }
 
 
@@ -19,6 +36,8 @@
   color: rgba(255, 255, 255, 0.801);
   animation: flicker 2s infinite;
   font-family: 'Road_Rage';
+
+ 
 }
 
 @font-face {
@@ -28,7 +47,8 @@
 
 #fontS {
   opacity: 0;
-  animation: flicker 2s infinite;
+  animation: flicker 3s infinite;
+
 }
 
 #fontY {

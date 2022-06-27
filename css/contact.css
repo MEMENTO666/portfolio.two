@@ -20,11 +20,10 @@
     0 0 2px #fff,
     0 0 20px #fff,
     0 0 2px #fff,
-    0 0 20px #ff0404,
-    0 0 30px #ff0404,
-    0 0 20px #ff0404,
-    0 0 20px #ff0404,
-    0 0 20px #ff0404;
+    0 0 20px #04b0ff,
+    0 0 30px #04e2ff,
+    0 0 20px #04e2ff,
+    0 0 50px #7104ff;
     animation: profileBox 2.5s infinite;
     /* border: 1px solid black; */
 }
@@ -49,10 +48,10 @@
   margin-top:20px;
   /* border: 1px solid black; */
   box-shadow:
-  0 0 8px #ffffff,
-  0 0 5px #fffefe,
-  0 0 20px #ffffff,
-  0 0 55px rgb(253, 2, 2)
+  0 0 15px #ffffff,
+  0 0 9px #fffefe,
+  0 0 30px #ffffff,
+  0 0 90px rgb(14, 141, 214)
 }
 
 #info {

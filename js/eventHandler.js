@@ -99,8 +99,8 @@ rotatingTrack_circle1.addEventListener("mouseover", () =>{
   rotatingTrack_circle1.style.transition = "0.8s";
 })
 rotatingTrack_circle1.addEventListener("mouseout", () =>{
-  rotatingTrack_circle1.style.width = "120px";
-  rotatingTrack_circle1.style.height = "120px";
+  rotatingTrack_circle1.style.width = "150px";
+  rotatingTrack_circle1.style.height = "150px";
   rotatingTrack_circle1.style.transition = "0.8s";
 })
 
@@ -110,8 +110,8 @@ rotatingTrack_circle2.addEventListener("mouseover", () =>{
   rotatingTrack_circle2.style.transition = "0.8s";
 })
 rotatingTrack_circle2.addEventListener("mouseout", () =>{
-  rotatingTrack_circle2.style.width = "120px";
-  rotatingTrack_circle2.style.height = "120px";
+  rotatingTrack_circle2.style.width = "150px";
+  rotatingTrack_circle2.style.height = "150px";
   rotatingTrack_circle2.style.transition = "0.8s";
 })
 
@@ -121,8 +121,8 @@ rotatingTrack_circle3.addEventListener("mouseover", () =>{
   rotatingTrack_circle3.style.transition = "0.8s";
 })
 rotatingTrack_circle3.addEventListener("mouseout", () =>{
-  rotatingTrack_circle3.style.width = "120px";
-  rotatingTrack_circle3.style.height = "120px";
+  rotatingTrack_circle3.style.width = "150px";
+  rotatingTrack_circle3.style.height = "150px";
   rotatingTrack_circle3.style.transition = "0.8s";
 })
 
@@ -132,8 +132,8 @@ rotatingTrack_circle4.addEventListener("mouseover", () =>{
   rotatingTrack_circle4.style.transition = "0.8s";
 })
 rotatingTrack_circle4.addEventListener("mouseout", () =>{
-  rotatingTrack_circle4.style.width = "120px";
-  rotatingTrack_circle4.style.height = "120px";
+  rotatingTrack_circle4.style.width = "150px";
+  rotatingTrack_circle4.style.height = "150px";
   rotatingTrack_circle4.style.transition = "0.8s";
 })
 

@@ -3,18 +3,19 @@
   18%,
   22%,
   25%,
+  45%,
   53%,
   57%,
   100% {
     text-shadow:
-    0 0 6px rgba(255, 255, 255, 0.459),
-    0 0 6px rgba(255, 255, 255, 0.473),
-    0 0 1px rgb(165, 155, 155),
-    0 0 5px rgb(233, 12, 67),
-    0 0 20px rgb(233, 12, 67),
-    0 0 100px rgb(233, 12, 67),
-    0 0 10px rgb(3, 255, 24),
-    0  10px rgb(233, 12, 67);
+    /* 0 0 10px rgb(255, 255, 255), */
+    0 0 2px rgb(255, 255, 255),
+    /* 0 0 5px rgb(255, 255, 255), */
+    0 0 60px rgb(0, 195, 255),
+    0 0 1px rgb(0, 255, 255),
+    0 0 60px rgb(23, 202, 187),
+    /* 0 0 10px rgb(255, 255, 255), */
+    0  15px rgb(12, 126, 233);
   }
   20%,
   24%,
@@ -192,4 +193,23 @@
   55% {
     box-shadow: none;
   }
+}
+
+@keyframes glitch {
+  1%{
+    transform: rotateX(10deg) skewX(90deg);
+  }
+  2%{
+    transform: rotateX(89deg) skewX(89deg);
+  }
+}
+
+@keyframes glitch-2 {
+  1%{
+    transform: rotateX(10deg) skewX(70deg);
+  }
+  1.5%{
+    transform: rotateX(0deg) skewX(0deg);
+  }
+  
 }
