@@ -2,4 +2,54 @@
   width:100vw;
   height:100vh;
   background-color: #161021;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#rotatingTrack {
+  width:700px;
+  height:700px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+#rotatingTrack_circle1 {
+  width:120px;
+  height:120px;
+  background-color: red;
+  border-radius: 50%;
+  position: relative;
+  top:40%;
+  left:-50px;
+}
+
+#rotatingTrack_circle2 {
+  width:120px;
+  height:120px;
+  background-color: green;
+  border-radius: 50%;
+  position: relative;
+  top:23%;
+  left:630px;
+}
+
+#rotatingTrack_circle3 {
+  width:120px;
+  height:120px;
+  background-color: blue;
+  border-radius: 50%;
+  position: relative;
+  top:-300px;
+  left:280px;
+}
+
+#rotatingTrack_circle4 {
+  width:120px;
+  height:120px;
+  background-color: orange;
+  border-radius: 50%;
+  position: relative;
+  bottom:-280px;
+  left:290px;
 }

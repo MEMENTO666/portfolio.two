@@ -1,34 +1,21 @@
 export const eventHandler = () => {
-  const hamBtn = document.getElementById("hamBtn");
   const intro = document.getElementById("intro");
   const about = document.getElementById("about");
   const neon = document.getElementById("neon");
   const img = document.getElementById("img");
-  const hamTop = document.getElementById("hamTop");
-  const hamMid = document.getElementById("hamMid")
-  const hamBottom = document.getElementById("hamBottom")
   const fontY = document.getElementById("fontY");
   const fontS = document.getElementById("fontS");
   const aboutBox1 = document.getElementById("aboutBox1");
   const aboutBox2 = document.getElementById("aboutBox2");
   const aboutBox3 = document.getElementById("aboutBox3");
   const aboutBox4 = document.getElementById("aboutBox4");
-  const aboutBox5 = document.getElementById("aboutBox5");
+  const rotatingTrack = document.getElementById("rotatingTrack");
+  const rotatingTrack_circle1 = document.getElementById("rotatingTrack_circle1")
+  const rotatingTrack_circle2 = document.getElementById("rotatingTrack_circle2")
+  const rotatingTrack_circle3 = document.getElementById("rotatingTrack_circle3")
+  const rotatingTrack_circle4 = document.getElementById("rotatingTrack_circle4")
 
 
-
-
-    
-// hamBtn.addEventListener("click", ()=>{
-//   hamTop.style.transform = "rotate(-45deg)";
-//   hamTop.style.marginTop = 24.7+"px";
-//   hamMid.style.opacity = 0;
-//   hamBottom.style.transform = "rotate(45deg)";
-//   hamBottom.style.marginBottom = 25+"px";
-//   hamBottom.style.transition = "0.6s";
-//   hamTop.style.transition = "0.6s";
-//   hamMid.style.transition = "2.2s";
-// })
 // ? intro 화면에 text 효과 
 setTimeout(function (){
   fontS.style.opacity = 0.8;
@@ -45,41 +32,73 @@ setTimeout(function (){
 aboutBox1.addEventListener("mouseover", () => {
   aboutBox1.style.transform = "rotateX(180deg)";
   aboutBox1.style.transition = "1.2s";
-})
+});
 aboutBox1.addEventListener("mouseout", () => {
   aboutBox1.style.transform = "rotateX(0deg)";
-})
+});
 
 aboutBox2.addEventListener("mouseover", () => {
   aboutBox2.style.transform = "rotateX(180deg)";
   aboutBox2.style.transition = "1.2s";
-})
+});
 aboutBox2.addEventListener("mouseout", () => {
   aboutBox2.style.transform = "rotateX(0deg)";
-})
+});
 
 aboutBox3.addEventListener("mouseover", () => {
   aboutBox3.style.transform = "rotateX(180deg)";
   aboutBox3.style.transition = "1.2s";
-})
+});
 aboutBox3.addEventListener("mouseout", () => {
   aboutBox3.style.transform = "rotateX(0deg)";
-})
+});
 
 aboutBox4.addEventListener("mouseover", () => {
   aboutBox4.style.transform = "rotateX(180deg)";
   aboutBox4.style.transition = "1.2s";
-})
+});
 aboutBox4.addEventListener("mouseout", () => {
   aboutBox4.style.transform = "rotateX(0deg)";
-})
+});
 
-aboutBox5.addEventListener("mouseover", () => {
-  aboutBox5.style.transform = "rotateX(180deg)";
-  aboutBox5.style.transition = "1.2s";})
-aboutBox5.addEventListener("mouseout", () => {
-  aboutBox5.style.transform = "rotateX(0deg)";
-})
+const setRotateAnimation = () => {
+  let degree = 0;
+
+  let rotateTimer = setInterval(() => {
+    degree++; // ++로 시계방향으로 돌아가게
+    if(degree === 300) {
+      degree = 0;
+    }
+    rotatingTrack.style.transform = `rotate(${degree}deg)`;
+  }, 40);
+
+  rotatingTrack.addEventListener("mouseover", () => {
+    console.log('in !!!');
+    clearInterval(rotateTimer);
+    rotateTimer = undefined;
+    
+  });
+
+  rotatingTrack.addEventListener("mouseout", () => {
+    console.log('out !!!');
+    if(!rotateTimer) {
+      rotateTimer = setInterval(() => {
+        degree++;
+        if(degree === 360) {
+          degree = 0;
+        }
+        rotatingTrack.style.transform = `rotate(${degree}deg)`;
+      }, 50);
+    }
+  });
+}
+setRotateAnimation();
+
+
+
+
+
+
 
 
 
