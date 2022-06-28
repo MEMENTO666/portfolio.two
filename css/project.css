@@ -10,23 +10,38 @@
 #rotatingTrack {
   width:700px;
   height:700px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: 50%;
   color : white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  box-shadow:
-  0 0 24px #fff,
-  0 0 60px rgb(0, 225, 255),
-  0 0 5px #00a6f3,
-  0 0 40px #00aef3,
-  0 0 30px #0039f3,
-  0 0 25px #ffffff;
+  animation: rotatingCircle 3s infinite;
 }
 
-#rotatingTrack > div {
+/* #rotatingTrack2 {
+  width:500px;
+  height:500px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotatingCircle2 2s infinite;
+} */
+
+/* #rotatingTrack3 {
+  width:300px;
+  height:300px;
+  border-radius: 50%;
+  animation: rotatingCircle3 4s infinite;
+} */
+
+#rotatingTrack_circle1 {
+  top:40%;
+  left:-60px;
   width:150px;
   height:150px;
-  /* border: 1px solid orange; */
   position: absolute;
   border-radius: 50%;
   cursor: pointer;
@@ -34,24 +49,39 @@
   backdrop-filter: blur(10px);
 }
 
-
-#rotatingTrack_circle1 {
-  top:40%;
-  left:-60px;
-}
-
 #rotatingTrack_circle2 {
   top:40%;
   left:610px;
+  width:150px;
+  height:150px;
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.178);
+  backdrop-filter: blur(10px);
 }
 
 #rotatingTrack_circle3 {
   top:-60px;
   left:280px;
+  width:150px;
+  height:150px;
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.178);
+  backdrop-filter: blur(10px);
 }
 
 #rotatingTrack_circle4 {
   bottom:-60px;
   left:280px;
+  width:150px;
+  height:150px;
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.178);
+  backdrop-filter: blur(10px);
 }
 

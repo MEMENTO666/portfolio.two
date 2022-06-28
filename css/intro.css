@@ -22,7 +22,7 @@
   0 0 30px #04e2ff,
   0 0 20px #04e2ff,
   0 0 50px #7104ff;
-  animation:profileBox 1.5s infinite;
+  animation:profileBox 2.5s infinite;
   border-radius: 20px;
 }
 
@@ -36,8 +36,10 @@
   color: rgba(255, 255, 255, 0.801);
   animation: flicker 2s infinite;
   font-family: 'Road_Rage';
+}
 
- 
+#neon > span {
+  color:#04e2ff;
 }
 
 @font-face {
