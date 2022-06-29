@@ -51,7 +51,11 @@
   0 0 15px #ffffff,
   0 0 9px #fffefe,
   0 0 30px #ffffff,
-  0 0 90px rgb(14, 141, 214)
+  0 0 90px rgb(14, 141, 214);
+  background-image: url(./asset/samurai.gif);
+  background-size:250%;
+  background-position: center;
+  
 }
 
 #info {

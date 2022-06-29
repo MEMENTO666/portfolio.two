@@ -5,6 +5,7 @@ export const eventHandler = () => {
   const img = document.getElementById("img");
   const fontY = document.getElementById("fontY");
   const fontS = document.getElementById("fontS");
+  const introduce = document.getElementById("introduce");
   const aboutBox1 = document.getElementById("aboutBox1");
   const aboutBox2 = document.getElementById("aboutBox2");
   const aboutBox3 = document.getElementById("aboutBox3");
@@ -15,6 +16,13 @@ export const eventHandler = () => {
   const rotatingTrack_circle3 = document.getElementById("rotatingTrack_circle3")
   const rotatingTrack_circle4 = document.getElementById("rotatingTrack_circle4")
 
+
+const boxArray = [ aboutBox1,aboutBox2,aboutBox3,aboutBox4]
+
+// const allBox = document.getElementById("introduce");
+// boxArray.forEach(box => {
+//   allBox.appendChild(box);
+// });
 
 // ? intro 화면에 text 효과 
 setTimeout(function (){
@@ -29,6 +37,9 @@ setTimeout(function (){
 
 // ?  aboutBox 들을 자식새끼로 묶어서 한번에 처리할 수 있게.
 // ? 해당 스크롤 스코프로 이동 시 좌/우 Box들이 양 옆에서 미끄러지듯이 배치.
+
+
+
 aboutBox1.addEventListener("mouseover", () => {
   aboutBox1.style.transform = "rotateX(180deg)";
   aboutBox1.style.transition = "1.2s";
@@ -70,7 +81,7 @@ const setRotateAnimation = () => {
       degree = 0;
     }
     rotatingTrack.style.transform = `rotate(${degree}deg)`;
-  }, 45);
+  }, 35);
 
   rotatingTrack.addEventListener("mouseover", () => {
     console.log('in !!!');
@@ -136,8 +147,6 @@ rotatingTrack_circle4.addEventListener("mouseout", () =>{
   rotatingTrack_circle4.style.height = "150px";
   rotatingTrack_circle4.style.transition = "0.8s";
 })
-
-
 
 
 
