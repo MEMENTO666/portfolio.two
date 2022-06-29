@@ -16,9 +16,6 @@ export const eventHandler = () => {
   const rotatingTrack_circle3 = document.getElementById("rotatingTrack_circle3")
   const rotatingTrack_circle4 = document.getElementById("rotatingTrack_circle4")
 
-
-const boxArray = [ aboutBox1,aboutBox2,aboutBox3,aboutBox4]
-
 // const allBox = document.getElementById("introduce");
 // boxArray.forEach(box => {
 //   allBox.appendChild(box);
@@ -39,42 +36,49 @@ setTimeout(function (){
 // ? 해당 스크롤 스코프로 이동 시 좌/우 Box들이 양 옆에서 미끄러지듯이 배치.
 
 
+// 
+// const commonMouseOverHandler = (element) => {
+//   console.log(element);
+//   if(!element) {
+//     console.log('[MOUSEOVER] exception occured, ignore event handler...');
+//     return;
+//   }
+//   element.style.transform = 'rotateX(180deg)';
+//   element.style.transition = '1.2s';
+// }
 
-aboutBox1.addEventListener("mouseover", () => {
-  aboutBox1.style.transform = "rotateX(180deg)";
-  aboutBox1.style.transition = "1.2s";
-});
-aboutBox1.addEventListener("mouseout", () => {
-  aboutBox1.style.transform = "rotateX(0deg)";
+// const commonMouseOutHandler = (element) => {
+//   if(!element) {
+//     console.log('[MOUSEOUT] exception occured, ignore event handler...');
+//     return;
+//   }
+//   element.style.transform = 'rotateX(0deg)';
+// }
+
+// Array.from(introduce.children).forEach(child => {
+//   child.addEventListener('mouseover', () => commonMouseOverHandler(child));
+//   child.addEventListener('mouseout', () => commonMouseOutHandler(child));
+// });
+
+Array.from(introduce.children).forEach(child => {
+  child.addEventListener('mouseover', () => {
+    child.style.transform = 'rotateX(180deg)';
+    child.style.transition = '1.2s';
+  });
+
+  child.addEventListener('mouseout', () => {
+    child.style.transform = 'rotateX(0deg)';
+  });
 });
 
-aboutBox2.addEventListener("mouseover", () => {
-  aboutBox2.style.transform = "rotateX(180deg)";
-  aboutBox2.style.transition = "1.2s";
-});
-aboutBox2.addEventListener("mouseout", () => {
-  aboutBox2.style.transform = "rotateX(0deg)";
-});
-
-aboutBox3.addEventListener("mouseover", () => {
-  aboutBox3.style.transform = "rotateX(180deg)";
-  aboutBox3.style.transition = "1.2s";
-});
-aboutBox3.addEventListener("mouseout", () => {
-  aboutBox3.style.transform = "rotateX(0deg)";
-});
-
-aboutBox4.addEventListener("mouseover", () => {
-  aboutBox4.style.transform = "rotateX(180deg)";
-  aboutBox4.style.transition = "1.2s";
-});
-aboutBox4.addEventListener("mouseout", () => {
-  aboutBox4.style.transform = "rotateX(0deg)";
-});
+Array.from(rotatingTrack.children).forEach(child => {
+  child.addEventListener("mouseover", ()=>{
+    
+  })
+})
 
 const setRotateAnimation = () => {
   let degree = 0;
-
   let rotateTimer = setInterval(() => {
     degree++; // ++로 시계방향으로 돌아가게
     if(degree === 360) {
@@ -82,7 +86,8 @@ const setRotateAnimation = () => {
     }
     rotatingTrack.style.transform = `rotate(${degree}deg)`;
   }, 35);
-
+  
+  
   rotatingTrack.addEventListener("mouseover", () => {
     console.log('in !!!');
     clearInterval(rotateTimer);
@@ -102,6 +107,7 @@ const setRotateAnimation = () => {
     }
   });
 }
+
 setRotateAnimation();
 
 rotatingTrack_circle1.addEventListener("mouseover", () =>{
