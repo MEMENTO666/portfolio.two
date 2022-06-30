@@ -7,55 +7,58 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* background-image: url(./asset/katana.jpg); */
+  background-size: cover;
+  background-position: center;
 }
 
-#introSquare {
+/* #introSquare {
   width: 50vw;
   height:50vh;
   position: absolute;
   opacity: 0.8;
-  box-shadow:
-  0 0 2px #fff,
-  0 0 20px #fff,
-  0 0 2px #fff,
-  0 0 20px #04b0ff,
-  0 0 30px #04e2ff,
-  0 0 20px #04e2ff,
-  0 0 50px #7104ff;
   animation:profileBox 2.5s infinite;
   border-radius: 20px;
-}
-
+} */
 
       /*********************intro폰트영역**************** */
 #neon {
   font-size: 120px;
   letter-spacing: 7px;
   text-align: center;
-  transform: rotate(-20deg);
+  /* transform: rotate(-20deg); */
   color: rgba(255, 255, 255, 0.801);
   animation: flicker 2s infinite;
   font-family: 'Road_Rage';
+  letter-spacing: 20px;
+  transform: rotate(-15deg);
 }
 
 #neon > span {
-  color:#04e2ff;
+  color: white;
+  
 }
 
 @font-face {
   font-family: 'Road_Rage';
   src: url('./font/Road_Rage.woff') format('woff');
+  /* 예비용 폰트도 하나 마련 */
 }
 
 #fontS {
   opacity: 0;
-  animation: flicker 3s infinite;
-
+  animation: flicker2 5s infinite;
+  
 }
 
 #fontY {
   opacity: 0;
-  animation: flicker 2.5s infinite;
+  animation: flicker2 5.5s infinite;
+}
+
+#fontGood {
+  animation: flicker3 1s infinite;
+  
 }
   
 

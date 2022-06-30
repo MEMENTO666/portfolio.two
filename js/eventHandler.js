@@ -16,10 +16,6 @@ export const eventHandler = () => {
   const rotatingTrack_circle3 = document.getElementById("rotatingTrack_circle3")
   const rotatingTrack_circle4 = document.getElementById("rotatingTrack_circle4")
 
-// const allBox = document.getElementById("introduce");
-// boxArray.forEach(box => {
-//   allBox.appendChild(box);
-// });
 
 // ? intro 화면에 text 효과 
 setTimeout(function (){
@@ -60,6 +56,7 @@ setTimeout(function (){
 //   child.addEventListener('mouseout', () => commonMouseOutHandler(child));
 // });
 
+//? about --> introdce영역 자식으로 엮어줌
 Array.from(introduce.children).forEach(child => {
   child.addEventListener('mouseover', () => {
     child.style.transform = 'rotateX(180deg)';
@@ -70,13 +67,7 @@ Array.from(introduce.children).forEach(child => {
     child.style.transform = 'rotateX(0deg)';
   });
 });
-
-Array.from(rotatingTrack.children).forEach(child => {
-  child.addEventListener("mouseover", ()=>{
-    
-  })
-})
-
+//? rotatingcircle 회전 애니메이션 구현 영역.
 const setRotateAnimation = () => {
   let degree = 0;
   let rotateTimer = setInterval(() => {
@@ -85,17 +76,24 @@ const setRotateAnimation = () => {
       degree = 0;
     }
     rotatingTrack.style.transform = `rotate(${degree}deg)`;
-  }, 35);
+  }, 45);
   
-  
-  rotatingTrack.addEventListener("mouseover", () => {
+  //? project 영역 회전하는 circle에 mouseover시 회전 멈춤, out시 다시 회전.
+  //? 큰 circle에 작은 circle 자식요소로 심는 동시에 event 발생.
+  Array.from(rotatingTrack.children).forEach(child => {
+  child.addEventListener("mouseover", () => {
+    child.style.width = "200px";
+    child.style.height = "200px";
+    child.style.transition = "0.8s";
     console.log('in !!!');
     clearInterval(rotateTimer);
     rotateTimer = undefined;
   });
 
-  rotatingTrack.addEventListener("mouseout", () => {
+  child.addEventListener("mouseout", () => {
     console.log('out !!!');
+    child.style.width = "150px";
+    child.style.height = "150px";
     if(!rotateTimer) {
       rotateTimer = setInterval(() => {
         degree++;
@@ -103,56 +101,15 @@ const setRotateAnimation = () => {
           degree = 0;
         }
         rotatingTrack.style.transform = `rotate(${degree}deg)`;
-      }, 50);
+      },45);
     }
   });
+})
 }
 
 setRotateAnimation();
 
-rotatingTrack_circle1.addEventListener("mouseover", () =>{
-  rotatingTrack_circle1.style.width = "200px";
-  rotatingTrack_circle1.style.height = "200px";
-  rotatingTrack_circle1.style.transition = "0.8s";
-})
-rotatingTrack_circle1.addEventListener("mouseout", () =>{
-  rotatingTrack_circle1.style.width = "150px";
-  rotatingTrack_circle1.style.height = "150px";
-  rotatingTrack_circle1.style.transition = "0.8s";
-})
 
-rotatingTrack_circle2.addEventListener("mouseover", () =>{
-  rotatingTrack_circle2.style.width = "200px";
-  rotatingTrack_circle2.style.height = "200px";
-  rotatingTrack_circle2.style.transition = "0.8s";
-})
-rotatingTrack_circle2.addEventListener("mouseout", () =>{
-  rotatingTrack_circle2.style.width = "150px";
-  rotatingTrack_circle2.style.height = "150px";
-  rotatingTrack_circle2.style.transition = "0.8s";
-})
-
-rotatingTrack_circle3.addEventListener("mouseover", () =>{
-  rotatingTrack_circle3.style.width = "200px";
-  rotatingTrack_circle3.style.height = "200px";
-  rotatingTrack_circle3.style.transition = "0.8s";
-})
-rotatingTrack_circle3.addEventListener("mouseout", () =>{
-  rotatingTrack_circle3.style.width = "150px";
-  rotatingTrack_circle3.style.height = "150px";
-  rotatingTrack_circle3.style.transition = "0.8s";
-})
-
-rotatingTrack_circle4.addEventListener("mouseover", () =>{
-  rotatingTrack_circle4.style.width = "200px";
-  rotatingTrack_circle4.style.height = "200px";
-  rotatingTrack_circle4.style.transition = "0.8s";
-})
-rotatingTrack_circle4.addEventListener("mouseout", () =>{
-  rotatingTrack_circle4.style.width = "150px";
-  rotatingTrack_circle4.style.height = "150px";
-  rotatingTrack_circle4.style.transition = "0.8s";
-})
 
 
 
