@@ -1,101 +1,110 @@
 
-  /* ********************intro 영역********************/
+/* ********************intro 영역********************/
 #intro {
-  width: 100vw;
-  height: 100vh;
-  background-color: #0d0914;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* background-image: url(./asset/katana.jpg); */
-  background-size: cover;
-  background-position: center;
+width: 100vw;
+height: 100vh;
+/* background-color: #0d0914; */
+display: flex;
+align-items: center;
+justify-content: center;
+/* background-image: url(./asset/katana.jpg); */
+background-size: cover;
+background-position: center;
+overflow: hidden;
+
 }
 
 /* #introSquare {
-  width: 50vw;
-  height:50vh;
-  position: absolute;
-  opacity: 0.8;
-  animation:profileBox 2.5s infinite;
-  border-radius: 20px;
+width: 50vw;
+height:50vh;
+position: absolute;
+opacity: 0.8;
+animation:profileBox 2.5s infinite;
+border-radius: 20px;
 } */
 
-      /*********************intro폰트영역**************** */
-#neon {
-  font-size: 120px;
-  letter-spacing: 7px;
-  text-align: center;
-  /* transform: rotate(-20deg); */
-  color: rgba(255, 255, 255, 0.801);
-  animation: flicker 2s infinite;
-  font-family: 'Road_Rage';
-  letter-spacing: 20px;
-  transform: rotate(-15deg);
+    /*********************intro폰트영역**************** */
+h1 {
+  font-size: 6em;
+  color: white;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 0.30em #502d70;
+  animation: shake 10s linear forwards,
+  flicker 1.5s infinite;
+  font-family: "Midnight_Drive";
+  }
+  
+h1 span {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(10% 0%, 44% 0%, 70% 100% , 55% 100%);
+    animation: flicker2 2s infinite;
+}
+  
+h1::before,
+h1::after {
+    content: attr(data-text);
+    position: absolute;
 }
 
-#neon > span {
-  color: white;
-  
+h1::before {
+    animation: crack1 4.5s linear forwards;
+    /* linear forwards가 뭐지? */
+    clip-path: polygon(0% 0%, 10% 0%, 55% 100% , -30% 100%);
+}
+
+h1::after {
+    animation: crack2 3.5s linear forwards;
+
+    /* linear forwards가 뭐지? */
+    clip-path: polygon(44% 0%, 100% 00%, 300% 100%, 70% 100%);
 }
 
 @font-face {
-  font-family: 'Road_Rage';
-  src: url('./font/Road_Rage.woff') format('woff');
-  /* 예비용 폰트도 하나 마련 */
+font-family: 'Midnight_Drive';
+src: url('./font/Midnight_Drive.woff') format('woff');
+/* 예비용 폰트도 하나 마련 */
 }
 
 #fontS {
-  opacity: 0;
-  animation: flicker2 5s infinite;
-  
+opacity: 0;
+animation: flicker2 5s infinite;
+
 }
 
 #fontY {
-  opacity: 0;
-  animation: flicker2 5.5s infinite;
+opacity: 0;
+animation: flicker2 5.5s infinite;
 }
 
 #fontGood {
-  animation: flicker3 1s infinite;
-  
+animation: flicker3 1s infinite;
+
 }
-  
 
-
-
-
-
-
-
-
-
-
-
-
-          /* *********************햄버거 메뉴 버튼 영역******************************** */
+        /* *********************햄버거 메뉴 버튼 영역******************************** */
 /* #hamBtn {
-  width: 50px;
-  height: 50px;
-  right: 50px;
-  top: 60px;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  border: 2px solid white;
-  border-radius: 60%;
-  flex-direction: column;
-  box-shadow: 0 0 7px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #00FF19,
-    0 0 3px #00FF19, 0 0 92px #00FF19, 0 0 1px #00FF19, 0 0 5px #00FF19;
-  cursor: pointer;
+width: 50px;
+height: 50px;
+right: 50px;
+top: 60px;
+position: fixed;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+border: 2px solid white;
+border-radius: 60%;
+flex-direction: column;
+box-shadow: 0 0 7px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #00FF19,
+  0 0 3px #00FF19, 0 0 92px #00FF19, 0 0 1px #00FF19, 0 0 5px #00FF19;
+cursor: pointer;
 }
 
 #hamBtn>span {
-  width: 33px;
-  height: 5px;
-  background-color: #00FF19;
-  border-radius: 6px;
-  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 2px #fff, 0 0 4px #00FF19,
-    0 0 3px #00FF19, 0 0 9px #00FF19, 0 0 1px #00FF19, 0 0 5px #00FF19;
+width: 33px;
+height: 5px;
+background-color: #00FF19;
+border-radius: 6px;
+box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 2px #fff, 0 0 4px #00FF19,
+  0 0 3px #00FF19, 0 0 9px #00FF19, 0 0 1px #00FF19, 0 0 5px #00FF19;
 } */

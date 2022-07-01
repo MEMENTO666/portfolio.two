@@ -3,7 +3,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  
 }
 
 #root {
@@ -13,5 +12,6 @@ body {
   align-items: center;
   /* justify-content: center; */
   flex-direction: column;
+  background: linear-gradient(95deg,rgb(70, 70, 70),#020018,rgb(0, 0, 54));
 }
 
