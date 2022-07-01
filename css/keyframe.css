@@ -8,11 +8,9 @@
   57%,
   100% {
     text-shadow:
-    0 0 2px rgb(8, 184, 253),
-    0 0 6px rgb(12, 170, 243),
-    0 0 1px rgb(18, 224, 214),
-    0 0 6px rgb(1, 193, 252),
-    0  10px rgb(93, 2, 105);
+    0 0 10px #008188,
+    0 0 10px #BC0CE7,
+    0  8px #BC0CE7;
   }
   20%,
   24%,
@@ -153,13 +151,11 @@
   57%,
   100% {
     box-shadow:
-    0 0 4px #fff,
-    /* 0 0 11px #fff, */
-    /* 0 0 5px #fff, */
-    0 0 5px #35034d,
-    0 0 8px #200227,
-    /* 0 0 20px #ffffff, */
-    0 0 5px #ffffff;
+    0 0 20px rgb(15, 188, 211),
+    0 0 5px rgb(0, 225, 255),
+    0 0 6px rgb(195, 0, 221),
+    0 0 5px rgb(0, 196, 230),
+    0  0px rgb(24, 142, 211);
   }
   20%,
   24%,
@@ -326,7 +322,7 @@
 }
 
 @keyframes crack1 {
-  3% {
+  5% {
       transform: translate(1%, 10% );
   }
 
@@ -336,11 +332,38 @@
 }
 
 @keyframes crack2 {
-  3% {
-      transform: translate(-60%, -80%);
+  60%,80%{
+      transform: translate(-50%, -60%);
   }
 
-  80%,50%,70%,95%,100% {
-      transform: translate(-49%, -50%);
+  90%,100% {
+      transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes test {
+  10%,
+  18%,
+  57%,
+  100% {
+    box-shadow:
+    0 0 2px rgb(15, 188, 211),
+    0 0 6px rgb(251, 255, 0),
+    0 0 7px rgb(21, 255, 0),
+    0 0 8px rgb(195, 0, 221),
+    0 0 17px rgb(0, 4, 230),
+    0  1px rgb(211, 24, 24);
+  }
+  0%,
+  20%,
+  40%,
+  80% {
+    box-shadow:
+    0 0 2px rgb(238, 20, 20),
+    0 0 12px rgb(157, 207, 19),
+    0 0 7px rgb(0, 225, 255),
+    0 0 9px rgb(165, 41, 182),
+    0 0 10px rgb(255, 255, 255),
+    0  3px rgb(0, 255, 13);
   }
 }

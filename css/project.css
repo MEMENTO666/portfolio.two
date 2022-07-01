@@ -17,7 +17,9 @@
   justify-content: center;
   position: absolute;
   animation: rotatingCircle 3s infinite;
+  background: linear-gradient(260deg,rgb(58, 57, 57),#031e35,rgb(8, 21, 29));
 }
+
 
 #rotatingTrack_circle1 {
   top:40%;

@@ -32,7 +32,7 @@ setTimeout(function (){
 // ? 해당 스크롤 스코프로 이동 시 좌/우 Box들이 양 옆에서 미끄러지듯이 배치.
 
 
-// 
+
 // const commonMouseOverHandler = (element) => {
 //   console.log(element);
 //   if(!element) {

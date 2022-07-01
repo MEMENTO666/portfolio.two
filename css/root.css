@@ -13,5 +13,16 @@ body {
   /* justify-content: center; */
   flex-direction: column;
   background: linear-gradient(95deg,rgb(70, 70, 70),#020018,rgb(0, 0, 54));
+  position: absolute;
 }
 
+#line {
+  width:90vw;
+  height:600vh;
+  /* border: 1px solid white; */
+  position: absolute;
+  z-index: 0;
+  overflow: hidden;
+  /* animation:test 3s infinite; */
+  /* background: linear-gradient(#39F1FE,#F400AB);  */
+}

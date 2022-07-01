@@ -25,11 +25,10 @@ border-radius: 20px;
 
     /*********************intro폰트영역**************** */
 h1 {
-  font-size: 6em;
-  color: white;
+  font-size: 7em;
+  color: #ffffff;
   letter-spacing: 0.1em;
-  text-shadow: 0 0 0.30em #502d70;
-  animation: shake 10s linear forwards,
+  animation: shake 8s linear forwards,
   flicker 1.5s infinite;
   font-family: "Midnight_Drive";
   }
@@ -38,7 +37,7 @@ h1 span {
     position: absolute;
     transform: translate(-50%, -50%);
     clip-path: polygon(10% 0%, 44% 0%, 70% 100% , 55% 100%);
-    animation: flicker2 2s infinite;
+    animation: flicker2 1.5s infinite;
 }
   
 h1::before,
