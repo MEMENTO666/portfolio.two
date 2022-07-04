@@ -7,7 +7,6 @@ height: 100vh;
 display: flex;
 align-items: center;
 justify-content: center;
-/* background-image: url(./asset/katana.jpg); */
 background-size: cover;
 background-position: center;
 overflow: hidden;
@@ -65,45 +64,4 @@ src: url('./font/Midnight_Drive.woff') format('woff');
 /* 예비용 폰트도 하나 마련 */
 }
 
-#fontS {
-opacity: 0;
-animation: flicker2 5s infinite;
 
-}
-
-#fontY {
-opacity: 0;
-animation: flicker2 5.5s infinite;
-}
-
-#fontGood {
-animation: flicker3 1s infinite;
-
-}
-
-        /* *********************햄버거 메뉴 버튼 영역******************************** */
-/* #hamBtn {
-width: 50px;
-height: 50px;
-right: 50px;
-top: 60px;
-position: fixed;
-display: flex;
-align-items: center;
-justify-content: space-evenly;
-border: 2px solid white;
-border-radius: 60%;
-flex-direction: column;
-box-shadow: 0 0 7px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #00FF19,
-  0 0 3px #00FF19, 0 0 92px #00FF19, 0 0 1px #00FF19, 0 0 5px #00FF19;
-cursor: pointer;
-}
-
-#hamBtn>span {
-width: 33px;
-height: 5px;
-background-color: #00FF19;
-border-radius: 6px;
-box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 2px #fff, 0 0 4px #00FF19,
-  0 0 3px #00FF19, 0 0 9px #00FF19, 0 0 1px #00FF19, 0 0 5px #00FF19;
-} */

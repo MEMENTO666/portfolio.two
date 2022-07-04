@@ -8,8 +8,6 @@
   z-index: 2;
 }
 
-
-
 #backBoard {
   width:85vw;
   height:60vh;
@@ -37,7 +35,6 @@
   justify-content: space-around;
   flex-direction: column;
   /* border: 1px solid red; */
-
 }
 
 #introduce > div {
@@ -68,9 +65,6 @@
   transform-style: preserve-3d;
 }
 
-
-
-
 #aboutBox_front {
   position: relative;
   width: 100%;
@@ -80,7 +74,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 #aboutBox_back {
@@ -94,6 +87,7 @@
   align-items: center;
   justify-content: center;
 }
+
 #aboutBox_back > p {
   transform: rotate(180deg);
 }
