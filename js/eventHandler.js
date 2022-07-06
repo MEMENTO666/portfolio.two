@@ -3,8 +3,6 @@ export const eventHandler = () => {
   const about = document.getElementById("about");
   const neon = document.getElementById("neon");
   const img = document.getElementById("img");
-  const fontY = document.getElementById("fontY");
-  const fontS = document.getElementById("fontS");
   const introduce = document.getElementById("introduce");
   const aboutBox1 = document.getElementById("aboutBox1");
   const aboutBox2 = document.getElementById("aboutBox2");
@@ -17,16 +15,6 @@ export const eventHandler = () => {
   const rotatingTrack_circle4 = document.getElementById("rotatingTrack_circle4")
 
 
-// ? intro 화면에 text 효과 
-setTimeout(function (){
-  fontS.style.opacity = 0.8;
-  fontS.style.transition = "2s";
-},1500);
-
-setTimeout(function (){
-  fontY.style.opacity = 0.9;
-  fontY.style.transition = "2s";
-},2000);
 
 // ?  aboutBox 들을 자식새끼로 묶어서 한번에 처리할 수 있게.
 // ? 해당 스크롤 스코프로 이동 시 좌/우 Box들이 양 옆에서 미끄러지듯이 배치.
@@ -56,17 +44,18 @@ setTimeout(function (){
 //   child.addEventListener('mouseout', () => commonMouseOutHandler(child));
 // });
 
-//? about --> introdce영역 자식으로 엮어줌
+//? about --> introduce영역 자식으로 엮어줌
 Array.from(introduce.children).forEach(child => {
-  child.addEventListener('mouseover', () => {
-    child.style.transform = 'rotateX(180deg)';
-    child.style.transition = '1.2s';
+  child.addEventListener("mouseover", () => {
+    child.style.transform = "rotateX(180deg)";
+    child.style.transition = "1.2s";
   });
 
-  child.addEventListener('mouseout', () => {
-    child.style.transform = 'rotateX(0deg)';
+  child.addEventListener("mouseout", () => {
+    child.style.transform = "rotateX(0deg)";
   });
 });
+
 //? rotatingcircle 회전 애니메이션 구현 영역.
 const setRotateAnimation = () => {
   let degree = 0;
@@ -109,52 +98,147 @@ const setRotateAnimation = () => {
 
 setRotateAnimation();
 
+// !               videoPlayer 영역 
 
+const table = document.getElementById("table");
+const resetBtn = document.getElementById("reset");
 
+// 전역 변수, 반드시 함수들보다 위에 있어야함
+let target = null;
+const insertTape = document.getElementById("insert");
+let insertTapeRect = insertTape.getBoundingClientRect();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// tape들이 담길 box와 tape의 껍데기, 실제로 이동할 tape 생성
+const createTapeBox = (parent, boxName, tapeWidth, tapeHeight) => {
+  const tapeBox = document.createElement("div");
+  tapeBox.id = boxName;
+  tapeBox.style.width = "30%";
+  tapeBox.style.height = "100%";
+  tapeBox.style.backgroundColor = "pink";
+  tapeBox.style.display = "flex";
+  tapeBox.style.flexDirection = "column";
+  tapeBox.style.justifyContent = "flex-end";
+  tapeBox.style.alignItems = "flex-start";
+  tapeBox.style.paddingLeft = "20px";
+  tapeBox.style.paddingBottom = "6px";
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  // tape가 이동 한 후 돌아올 frame 생성.
+  for (let i = 0; i < 3; i++) {
+    const frame = document.createElement('div');
+    frame.id = boxName + '_frame_' + i.toString();
+    frame.style.width = `${tapeWidth}px`;
+    frame.style.height = `${tapeHeight}px`;
+    frame.style.border = "1px solid black"; // remove later
+    frame.style.transformStyle = 'preserve-3d'; // 3d값 그대로 전달
+    frame.style.perspective = '20px';
+    
+    
+    // 실제로 이동하는 애니메이션을 구현 할 tape 생성, frame이라는 위치에서 이동함.
+    // const frameSize = frame.getBoundingClientRect();
+    const realTape = document.createElement('div');
+    realTape.id = 'realTape_' + i.toString();
+    realTape.style.width = `${tapeWidth}px`;
+    realTape.style.height = `${tapeHeight}px`;
+    realTape.style.backgroundColor = 'cyan';
+    realTape.style.transition = '0.6s';
+    realTape.style.position = 'absolute';
+    realTape.style.cursor = "pointer";
+    frame.appendChild(realTape);
+    tapeBox.appendChild(frame);
+  }
+  
+  
+  
+  parent.appendChild(tapeBox);
 }
+// tape들이 이동하는 애니메이션 구현
+const setAnimatedBox = (elementId) => {
+  const box = document.getElementById(elementId);
+  if (!box) {
+    console.log('박스가 없다...');
+    return;
+  }
+  Array.from(box.children).forEach(tb => {
+    const real = tb.firstChild;
+    real.addEventListener('click', () => {
+      if (target !== null) {
+        target.style.transform = 'translate(0,0)';
+        console.log(tb);
+      }
+      target = real;
+      const selfRect = real.getBoundingClientRect();
+      const xDiff = insertTapeRect.left - selfRect.left;
+      const yDiff = insertTapeRect.top - selfRect.top;
+      setTimeout(() => {
+        real.style.transform = `translate3d(${xDiff}px, ${yDiff}px, 0px)`;
+      }, 750);
+      real.style.transform = `translate3d(${xDiff}px, ${yDiff}px, 4px)`;
+      
+    });
+  });
+}
+
+
+createTapeBox(table, 'tapeBox1', 100, 38);
+setAnimatedBox('tapeBox1');
+
+createTapeBox(table, 'tapeBox2', 100, 38);
+setAnimatedBox('tapeBox2');
+
+createTapeBox(table, 'tapeBox3', 100, 38);
+setAnimatedBox('tapeBox3');
+// 창 크기 변경시켰을 때 호출됨 (드래그 중에 아주 빠르게)
+window.addEventListener('resize', () => {
+  insertTapeRect = insertTape.getBoundingClientRect();
+  console.log(insertTapeRect);
+});
+
+// 리셋 버튼 처리
+resetBtn.addEventListener("click", () => {
+  target.style.transform = 'translateZ(6px)'; // z축 잠깐 띄움
+  setTimeout(() => {
+    target.style.transform = 'translate3d(0,0,0)'; // 1초 뒤 원래대로 돌려놓음
+  }, 650);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+};

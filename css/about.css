@@ -23,7 +23,7 @@
   height:500px;
 }
 #dancer {
-  border: 1px solid white;
+  border: 1px solid rgb(207, 3, 207);
   background-image: url(./asset/neonDancer.gif);
   background-position: center;
   background-size: cover;
