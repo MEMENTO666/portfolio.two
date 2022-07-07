@@ -32,25 +32,25 @@ export const eventHandler = () => {
 // }
 
 // const commonMouseOutHandler = (element) => {
-//   if(!element) {
-//     console.log('[MOUSEOUT] exception occured, ignore event handler...');
-//     return;
-//   }
-//   element.style.transform = 'rotateX(0deg)';
-// }
-
-// Array.from(introduce.children).forEach(child => {
-//   child.addEventListener('mouseover', () => commonMouseOverHandler(child));
-//   child.addEventListener('mouseout', () => commonMouseOutHandler(child));
-// });
-
-//? about --> introduce영역 자식으로 엮어줌
-Array.from(introduce.children).forEach(child => {
-  child.addEventListener("mouseover", () => {
-    child.style.transform = "rotateX(180deg)";
-    child.style.transition = "1.2s";
+  //   if(!element) {
+    //     console.log('[MOUSEOUT] exception occured, ignore event handler...');
+    //     return;
+    //   }
+    //   element.style.transform = 'rotateX(0deg)';
+    // }
+    
+    // Array.from(introduce.children).forEach(child => {
+      //   child.addEventListener('mouseover', () => commonMouseOverHandler(child));
+      //   child.addEventListener('mouseout', () => commonMouseOutHandler(child));
+      // });
+      
+      //? about --> introduce영역 자식으로 엮어줌
+      Array.from(introduce.children).forEach(child => {
+        child.addEventListener("mouseover", () => {
+          child.style.transform = "rotateX(180deg)";
+          child.style.transition = "1.2s";
   });
-
+  
   child.addEventListener("mouseout", () => {
     child.style.transform = "rotateX(0deg)";
   });
@@ -70,30 +70,30 @@ const setRotateAnimation = () => {
   //? project 영역 회전하는 circle에 mouseover시 회전 멈춤, out시 다시 회전.
   //? 큰 circle에 작은 circle 자식요소로 심는 동시에 event 발생.
   Array.from(rotatingTrack.children).forEach(child => {
-  child.addEventListener("mouseover", () => {
-    child.style.width = "200px";
-    child.style.height = "200px";
-    child.style.transition = "0.8s";
-    console.log('in !!!');
-    clearInterval(rotateTimer);
-    rotateTimer = undefined;
-  });
-
-  child.addEventListener("mouseout", () => {
-    console.log('out !!!');
-    child.style.width = "150px";
-    child.style.height = "150px";
-    if(!rotateTimer) {
-      rotateTimer = setInterval(() => {
-        degree++;
-        if(degree === 360) {
-          degree = 0;
-        }
-        rotatingTrack.style.transform = `rotate(${degree}deg)`;
-      },45);
-    }
-  });
-})
+    child.addEventListener("mouseover", () => {
+      child.style.width = "200px";
+      child.style.height = "200px";
+      child.style.transition = "0.8s";
+      console.log('in !!!');
+      clearInterval(rotateTimer);
+      rotateTimer = undefined;
+    });
+    
+    child.addEventListener("mouseout", () => {
+      console.log('out !!!');
+      child.style.width = "150px";
+      child.style.height = "150px";
+      if(!rotateTimer) {
+        rotateTimer = setInterval(() => {
+          degree++;
+          if(degree === 360) {
+            degree = 0;
+          }
+          rotatingTrack.style.transform = `rotate(${degree}deg)`;
+        },45);
+      }
+    });
+  })
 }
 
 setRotateAnimation();
@@ -102,11 +102,12 @@ setRotateAnimation();
 
 const table = document.getElementById("table");
 const resetBtn = document.getElementById("reset");
-
+const tape1 = document.getElementById("tapeBox1_frame_0");
 // 전역 변수, 반드시 함수들보다 위에 있어야함
 let target = null;
 const insertTape = document.getElementById("insert");
 let insertTapeRect = insertTape.getBoundingClientRect();
+
 
 // tape들이 담길 box와 tape의 껍데기, 실제로 이동할 tape 생성
 const createTapeBox = (parent, boxName, tapeWidth, tapeHeight) => {
@@ -121,6 +122,8 @@ const createTapeBox = (parent, boxName, tapeWidth, tapeHeight) => {
   tapeBox.style.alignItems = "flex-start";
   tapeBox.style.paddingLeft = "20px";
   tapeBox.style.paddingBottom = "6px";
+  const tape1 = document.getElementById("tapeBox1_frame_0");
+  
   
   
   // tape가 이동 한 후 돌아올 frame 생성.
@@ -131,8 +134,8 @@ const createTapeBox = (parent, boxName, tapeWidth, tapeHeight) => {
     frame.style.height = `${tapeHeight}px`;
     frame.style.border = "1px solid black"; // remove later
     frame.style.transformStyle = 'preserve-3d'; // 3d값 그대로 전달
-    frame.style.perspective = '20px';
-    
+    frame.style.perspective = '11px';
+    console.log(frame.id);
     
     // 실제로 이동하는 애니메이션을 구현 할 tape 생성, frame이라는 위치에서 이동함.
     // const frameSize = frame.getBoundingClientRect();
@@ -161,9 +164,9 @@ const setAnimatedBox = (elementId) => {
   }
   Array.from(box.children).forEach(tb => {
     const real = tb.firstChild;
-    real.addEventListener('click', () => {
+    real.addEventListener("click", () => {
       if (target !== null) {
-        target.style.transform = 'translate(0,0)';
+        target.style.transform = "translate(0,0)";
         console.log(tb);
       }
       target = real;
@@ -171,39 +174,41 @@ const setAnimatedBox = (elementId) => {
       const xDiff = insertTapeRect.left - selfRect.left;
       const yDiff = insertTapeRect.top - selfRect.top;
       setTimeout(() => {
-        real.style.transform = `translate3d(${xDiff}px, ${yDiff}px, 0px)`;
+      real.style.transform = `translate3d(${xDiff}px, ${yDiff}px, 0px)`;
       }, 750);
       real.style.transform = `translate3d(${xDiff}px, ${yDiff}px, 4px)`;
       
     });
   });
-}
+  
+  
+}  
 
 
-createTapeBox(table, 'tapeBox1', 100, 38);
-setAnimatedBox('tapeBox1');
+createTapeBox(table, "tapeBox1", 100, 38);
+setAnimatedBox("tapeBox1");
 
-createTapeBox(table, 'tapeBox2', 100, 38);
-setAnimatedBox('tapeBox2');
+createTapeBox(table, "tapeBox2", 100, 38);
+setAnimatedBox("tapeBox2");
 
-createTapeBox(table, 'tapeBox3', 100, 38);
-setAnimatedBox('tapeBox3');
+createTapeBox(table, "tapeBox3", 100, 38);
+setAnimatedBox("tapeBox3");
+
+
 // 창 크기 변경시켰을 때 호출됨 (드래그 중에 아주 빠르게)
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   insertTapeRect = insertTape.getBoundingClientRect();
   console.log(insertTapeRect);
-});
+});  
 
 // 리셋 버튼 처리
 resetBtn.addEventListener("click", () => {
-  target.style.transform = 'translateZ(6px)'; // z축 잠깐 띄움
+  
+  target.style.transform = "translateZ(6px)"; // z축 잠깐 띄움
   setTimeout(() => {
-    target.style.transform = 'translate3d(0,0,0)'; // 1초 뒤 원래대로 돌려놓음
+    target.style.transform = "translate3d(0,0,0)"; // 1초 뒤 원래대로 돌려놓음
   }, 650);
-})
-
-
-
+});
 
 
 
