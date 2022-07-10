@@ -6,6 +6,12 @@
   justify-content: center;
 }
 
+#projectText {
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
 #rotatingTrack {
   width:700px;
   height:700px;

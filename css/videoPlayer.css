@@ -22,6 +22,9 @@
   width: 230px;
   height: 230px;
   background-color: black;
+  background-image: url(./asset/no-signal.gif);
+  background-position: center;
+  background-size: cover;
 }
 
 #screenBottom {

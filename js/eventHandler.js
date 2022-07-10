@@ -47,7 +47,7 @@ export const eventHandler = () => {
       //? about --> introduce영역 자식으로 엮어줌
       Array.from(introduce.children).forEach(child => {
         child.addEventListener("mouseover", () => {
-          child.style.transform = "rotateX(180deg)";
+          child.style.transform = "rotateY(180deg)";
           child.style.transition = "1.2s";
   });
   
@@ -108,6 +108,25 @@ let target = null;
 const insertTape = document.getElementById("insert");
 let insertTapeRect = insertTape.getBoundingClientRect();
 
+const tapeImageMap = {
+  'tapeBox1': [
+    '../css/asset/tape1.png',
+    '../css/asset/tape2.png',
+    '../css/asset/tape3.png',
+  ],
+
+  'tapeBox2': [
+    '../css/asset/tape4.png',
+    '../css/asset/tape5.png',
+    '../css/asset/tape6.png',
+  ],
+
+  'tapeBox3': [
+    '../css/asset/tape7.png',
+    '../css/asset/tape8.png',
+    '../css/asset/tape9.png',
+  ],
+};
 
 // tape들이 담길 box와 tape의 껍데기, 실제로 이동할 tape 생성
 const createTapeBox = (parent, boxName, tapeWidth, tapeHeight) => {
@@ -122,10 +141,10 @@ const createTapeBox = (parent, boxName, tapeWidth, tapeHeight) => {
   tapeBox.style.alignItems = "flex-start";
   tapeBox.style.paddingLeft = "20px";
   tapeBox.style.paddingBottom = "6px";
-  const tape1 = document.getElementById("tapeBox1_frame_0");
   
-  
-  
+  const imageUrlList = tapeImageMap[boxName];
+  console.log('############ ', imageUrlList);
+
   // tape가 이동 한 후 돌아올 frame 생성.
   for (let i = 0; i < 3; i++) {
     const frame = document.createElement('div');
@@ -147,11 +166,12 @@ const createTapeBox = (parent, boxName, tapeWidth, tapeHeight) => {
     realTape.style.transition = '0.6s';
     realTape.style.position = 'absolute';
     realTape.style.cursor = "pointer";
+
+    realTape.style.backgroundImage = `url(${imageUrlList[i]})`;
+    
     frame.appendChild(realTape);
     tapeBox.appendChild(frame);
   }
-  
-  
   
   parent.appendChild(tapeBox);
 }
@@ -180,10 +200,7 @@ const setAnimatedBox = (elementId) => {
       
     });
   });
-  
-  
 }  
-
 
 createTapeBox(table, "tapeBox1", 100, 38);
 setAnimatedBox("tapeBox1");
@@ -196,54 +213,34 @@ setAnimatedBox("tapeBox3");
 
 
 // 창 크기 변경시켰을 때 호출됨 (드래그 중에 아주 빠르게)
-window.addEventListener("resize", () => {
-  insertTapeRect = insertTape.getBoundingClientRect();
-  console.log(insertTapeRect);
-});  
+// window.addEventListener("resize", () => {
+//   insertTapeRect = insertTape.getBoundingClientRect();
+//   console.log(insertTapeRect);
+// });  
 
 // 리셋 버튼 처리
 resetBtn.addEventListener("click", () => {
-  
   target.style.transform = "translateZ(6px)"; // z축 잠깐 띄움
   setTimeout(() => {
     target.style.transform = "translate3d(0,0,0)"; // 1초 뒤 원래대로 돌려놓음
+    target = null;
   }, 650);
 });
 
+const refreshResetButtonRect = () => {
+  insertTapeRect = insertTape.getBoundingClientRect();
+  console.log(insertTapeRect);
+}
 
+// 창 크기 변경시켰을 때 호출됨 (드래그 중에 아주 빠르게)
+window.addEventListener("resize", () => {
+  console.log('창 크기 변경해서 리셋버튼 위치가 바뀌었다. 리셋버튼 위치 갱신!!');
+  refreshResetButtonRect();
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+window.addEventListener('scroll', () => {
+  console.log('스크롤해서 리셋버튼 위치가 바뀌었다. 리셋버튼 위치 갱신!!!');
+  refreshResetButtonRect();
+});
 
 };

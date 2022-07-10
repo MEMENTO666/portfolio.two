@@ -8,59 +8,55 @@
 <title>portFolio_2</title>
 
 <style type="text/css">
-    @import url("css/root.css");
-    @import url("css/intro.css");
-    @import url("css/about.css");
-    @import url("css/videoPlayer.css");
-    @import url("css/project.css");
-    @import url("css/contact.css");
-    @import url("css/keyframe.css");
+@import url("css/root.css");
+@import url("css/intro.css");
+@import url("css/about.css");
+@import url("css/videoPlayer.css");
+@import url("css/project.css");
+@import url("css/contact.css");
+@import url("css/keyframe.css");
 </style>
 </head>
 
 <body>
 <script type="module" src="./app.js"></script>
 <div id="root">
-<div id="line"></div>
 <!--***************************** intro *********************************영역 -->
 
 <div id="intro">
     <div id="introSquare"></div>
-    <h1 data-text="Memento"><span>Memento</span></h1>
+    <h1 data-text="Memento">
+        <span>Memento</span></h1>
 </div>
-
 
 <!-- ***********************about 영역**************** -->
 <div id="about">
-    <div id="backBoard">
-        <div id="dancer"></div>
-        <div id="introduce">
-            <div id="aboutBox1">
-                <div id="aboutBox_front">안녕하십니까</div>
-                <div id="aboutBox_back">
-                    <p>HELLO</p>
-                </div>
-            </div>
-            <div id="aboutBox2">
-                <div id="aboutBox_front">반갑습니다</div>
-                <div id="aboutBox_back">
-                    <p>Nice to meet you</p>
-                </div>
-            </div>
-            <div id="aboutBox3">
-                <div id="aboutBox_front">이성윤입니다</div>
-                <div id="aboutBox_back">
-                    <p>와타시와 이성윤데스</p>
-                </div>
-            </div>
-            <div id="aboutBox4">
-                <div id="aboutBox_front">안녕히가세요</div>
-                <div id="aboutBox_back">
-                    <p>Bye</p>
-                </div>
-            </div>
-        </div>
+<div id="backBoard">
+    <div id="dancer"></div>
+    <div id="introduce">
+        <a id="aobutBox">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <p>empty1</p>
+        </a>
+        <a>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <p>empty2</p>
+        </a>
+        <a>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <p>empty3</p>
+        </a>
     </div>
+</div>
 </div>
 <!-- ******************video 영역********************* -->
 <div id="videoPlayer">
@@ -71,11 +67,11 @@
             <button id="reset"></button>
         </div>
     </div>
-    <div id="table">
-    </div>
+    <div id="table"></div>
 </div>
 <!-- **************************project영역********************* -->
 <div id="project">
+    <p id="projectText">PROJECT</p>
     <div id="rotatingTrack">
         <div id="rotatingTrack_circle1">1</div>
         <div id="rotatingTrack_circle2">2</div>
@@ -84,18 +80,22 @@
     </div>
 </div>
 
-<!--********************************** contact *******************************영역 -->
-<div id="contact">
-    <div id="profile">
-        <div id="img">
-            <div id="circle"></div>
-            <h4>1989.08.23~</h4>
+<!--********************************** contact *******************************영역
+-->
+    <div id="contact">
+        <div id="profile">
+            <div id="img">
+                <div id="circle"></div>
+                <h4>1989.08.23~</h4>
+            </div>
+            <div id="info">
+                <h3>Leesungyoon</h3>
+                <p>010 6476 0000</p>
+                <p>mementomorii666<br>@gmail.com</p>
+            </div>
         </div>
-        <div id="info">
-            <h3>Leesungyoon</h3>
-            <p>010 6476 0000</p>
-            <p>mementomorii666<br>@gmail.com</p>
-        </div>
+    </div>
+</div>
 
 </body>
 

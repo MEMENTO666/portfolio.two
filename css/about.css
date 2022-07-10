@@ -10,8 +10,8 @@
 
 #backBoard {
   width:85vw;
-  height:60vh;
-  /* border: 1px solid white; */
+  height:80vh;
+  border: 1px solid white;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -20,7 +20,8 @@
 
 #backBoard > div {
   width:35vw;
-  height:500px;
+  height:700px;
+  border: 1px solid white;
 }
 #dancer {
   border: 1px solid rgb(207, 3, 207);
@@ -32,15 +33,15 @@
 #introduce {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 #introduce > div {
   width: 30vw;
   height: 80px;
-  /* border: 1px solid white; */
+  border: 1px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,21 +49,77 @@
   
 }
 
-#aboutBox1 {
-  animation: aboutBox1 3.5s infinite;
-  transform-style: preserve-3d;
+a{
+  position: relative;
+  padding: 25px 30px;
+  color: #03e9f4;
+  text-decoration: none;
+  transition: 0.5s;
+  overflow: hidden;
+  text-transform: uppercase;
+  width:70%;
+  height:50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+ 
 }
-#aboutBox2 {
-  animation: aboutBox1 3s infinite;
-  transform-style: preserve-3d;
+a:hover{
+  background: #03e9f4;
+  color: white;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 200px #03e9f4;
+   -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
-#aboutBox3 {
-  animation: aboutBox1 3.2s infinite;
-  transform-style: preserve-3d;
+a:nth-child(1){
+  filter: hue-rotate(270deg);
 }
-#aboutBox4 {
-  animation: aboutBox1 4s infinite;
-  transform-style: preserve-3d;
+a:nth-child(2){
+  filter: hue-rotate(110deg);
+  /* background-color: red; */
+}
+a span{
+  position: absolute;
+}
+a span:nth-child(1){
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#03e9f4);
+  animation: neonButton1 1s linear infinite;
+}
+a span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,#03e9f4);
+  animation: neonButton2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+a span:nth-child(3){
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#03e9f4);
+  animation: neonButton3 1s linear infinite;
+  animation-delay: 0.50s;
+}
+
+a span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#03e9f4);
+  animation: neonButton4 1s linear infinite;
+  animation-delay: 0.75s;
 }
 
 #aboutBox_front {
