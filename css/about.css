@@ -11,7 +11,7 @@
 #backBoard {
   width:85vw;
   height:80vh;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -21,7 +21,7 @@
 #backBoard > div {
   width:35vw;
   height:700px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 #dancer {
   border: 1px solid rgb(207, 3, 207);
@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 #introduce > div {

@@ -8,39 +8,47 @@
 }
 
 #tv {
-  width: 300px;
-  height: 300px;
-  background-color: pink;
+  width: 340px;
+  height: 340px;
+  /* background-color: pink; */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   border-radius: 20px;
+  background-image:url(./asset/tvframe.png);
+  background-size: cover;
+  background-position: center;
 }
 
 #screen {
-  width: 230px;
-  height: 230px;
-  background-color: black;
+  width: 300px;
+  height: 220px;
+  background-color: #3C374D;
   background-image: url(./asset/no-signal.gif);
   background-position: center;
   background-size: cover;
+  position: relative;
+  bottom: 11px;
+  border-radius: 20px;
+  
 }
 
 #screenBottom {
-  width: 230px;
+  width: 250px;
   height: 40px;
-  background-color: orangered;
+  background-color: #3C374D;
   margin-top: 5px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  opacity: 0.6;
 }
 
 #insert {
-  width: 100px;
+  width: 220px;
   height: 38px;
-  background-color: orange;
+  background-color: #3C374D;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,11 +57,11 @@
 #reset {
   width: 30px;
   height: 30px;
-  background-color: red;
+  background-color: #3C374D;
 }
 
 #table {
-  width: 70vw;
+  width: 1200px;
   height: 200px;
   background-color: hotpink;
   margin-top: 5px;
@@ -63,4 +71,7 @@
   padding-bottom: 2%;
   padding-left: 2%;
   padding-right: 2%;
+  background-image: url(./asset/table.png);
+  background-position: center;
+  background-size: cover;
 }
