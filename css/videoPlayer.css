@@ -8,8 +8,8 @@
 }
 
 #tv {
-  width: 340px;
-  height: 340px;
+  width: 350px;
+  height: 350px;
   /* background-color: pink; */
   display: flex;
   align-items: center;
@@ -19,11 +19,30 @@
   background-image:url(./asset/tvframe.png);
   background-size: cover;
   background-position: center;
+  box-shadow: 15px 0px 0px 2px;
+  color: #1f1d33;
+  z-index: 0;
+}
+
+#tvBackText {
+  width:900px;
+  height:200px;
+  position: relative;
+  top:130px;
+  z-index: 0;
+  font-size: 120px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  animation: flicker 1s infinite;
+  color: white;
 }
 
 #screen {
-  width: 300px;
-  height: 220px;
+  width: 320px;
+  height: 230px;
   background-color: #3C374D;
   background-image: url(./asset/no-signal.gif);
   background-position: center;
@@ -31,33 +50,49 @@
   position: relative;
   bottom: 11px;
   border-radius: 20px;
-  
+}
+
+#can {
+  width:50px;
+  height:100px;
+  /* background-color: white; */
+  position: relative;
+  top:355px;
+  right:300px;
+  background-image: url(./asset/can.png);
+  background-position: center;
+  background-size:cover;
 }
 
 #screenBottom {
-  width: 250px;
+  width: 260px;
   height: 40px;
-  background-color: #3C374D;
+  /* background-color: #3c374d00; */
   margin-top: 5px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  opacity: 0.6;
+  /* border: 1px solid white; */
 }
 
 #insert {
-  width: 220px;
+  width: 290px;
   height: 38px;
-  background-color: #3C374D;
+  background-color: #3c374d17;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 #reset {
-  width: 30px;
-  height: 30px;
-  background-color: #3C374D;
+  width: 15px;
+  height: 15px;
+  background-color: crimson;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  top:37px;
+  right: 10px;
 }
 
 #table {
@@ -74,4 +109,5 @@
   background-image: url(./asset/table.png);
   background-position: center;
   background-size: cover;
+  border-radius: 20px;
 }

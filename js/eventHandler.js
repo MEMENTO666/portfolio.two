@@ -116,15 +116,15 @@ const tapeImageMap = {
   ],
 
   'tapeBox2': [
-    '../css/asset/tape1.png',
-    '../css/asset/tape2.png',
-    '../css/asset/tape3.png',
+    '../css/asset/tape4.png',
+    '../css/asset/tape5.png',
+    '../css/asset/tape6.png',
   ],
 
   'tapeBox3': [
-    '../css/asset/tape1.png',
-    '../css/asset/tape2.png',
-    '../css/asset/tape3.png',
+    '../css/asset/tape7.png',
+    '../css/asset/tape8.png',
+    '../css/asset/tape9.png',
   ],
 };
 
@@ -150,7 +150,7 @@ const createTapeBox = (parent, boxName, tapeWidth, tapeHeight) => {
     const frame = document.createElement('div');
     frame.id = boxName + '_frame_' + i.toString();
     // frame.style.width = `${tapeWidth}px`;
-    frame.style.width = "200px";
+    frame.style.width = "270px";
     frame.style.height = "30px";
     // frame.style.border = "1px solid black"; // remove later
     frame.style.transformStyle = 'preserve-3d'; // 3d값 그대로 전달
@@ -201,8 +201,8 @@ const setAnimatedBox = (elementId) => {
       setTimeout(() => {
       real.style.transform = `translate3d(${xDiff}px, ${yDiff}px, 0px)`;
       }, 750);
-      real.style.transform = `translate3d(${xDiff}px, ${yDiff}px, 4px)`;
-      
+      real.style.transform = `translate3d(${xDiff}px, ${yDiff}px, 3px)`;
+      real.style.opacity = 0.5;
     });
   });
 }  
@@ -226,8 +226,9 @@ setAnimatedBox("tapeBox3");
 // 리셋 버튼 처리
 resetBtn.addEventListener("click", () => {
   target.style.transform = "translateZ(6px)"; // z축 잠깐 띄움
+  target.style.opacity = 1;// 1초 뒤 원래대로 돌려놓음
   setTimeout(() => {
-    target.style.transform = "translate3d(0,0,0)"; // 1초 뒤 원래대로 돌려놓음
+    target.style.transform = "translate3d(0,0,0)"; 
     target = null;
   }, 650);
 });
