@@ -45,82 +45,6 @@
   }
 }
 
-@keyframes flicker3 {
-  0%,
-  18%,
-  22%,
-  25%,
-  45%,
-  53%,
-  57%,
-  100% {
-    text-shadow:
-      0 0 2px rgb(255, 255, 255),
-      0 0 60px rgb(0, 183, 255),
-      0 0 1px rgb(0, 204, 255),
-      0 0 60px rgb(14, 180, 221),
-      0 0 10px rgb(0, 0, 0),
-      0 10px rgb(38, 44, 44);
-  }
-
-  20%,
-  24%,
-  55% {
-    text-shadow: none;
-  }
-}
-
-@keyframes flickerBox {
-  0%,
-  18%,
-  22%,
-  25%,
-  53%,
-  57%,
-  100% {
-    box-shadow:
-      0 0 4px #fff,
-      0 0 11px #fff,
-      0 0 19px #fff,
-      0 0 20px #36dd4c,
-      0 0 8px #69b973,
-      0 0 40px #038a0a,
-      0 0 10px #04ff2e,
-      0 0 15px #19bd19;
-  }
-
-  20%,
-  24%,
-  55% {
-    box-shadow: none;
-  }
-}
-
-@keyframes flickerBox2 {
-  0%,
-  18%,
-  22%,
-  25%,
-  53%,
-  57%,
-  100% {
-    box-shadow:
-      0 0 4px rgb(37, 219, 52),
-      0 0 11px rgb(105, 179, 45),
-      0 0 9px rgb(97, 230, 85),
-      0 0 10px rgb(68, 214, 49),
-      0 0 8px #ffffff,
-      0 0 20px #b8e418,
-      0 0 10px #fffefe,
-      0 0 5px #34bb13;
-  }
-
-  20%,
-  24%,
-  55% {
-    box-shadow: none;
-  }
-}
 
 @keyframes profileBox {
   0%,
@@ -149,106 +73,6 @@
   }
 }
 
-@keyframes aboutBox1 {
-  0%,
-  18%,
-  22%,
-  25%,
-  53%,
-  57%,
-  100% {
-    box-shadow:
-      0 0 20px rgb(211, 15, 195),
-      0 0 5px rgb(179, 4, 170),
-      0 0 6px rgb(195, 0, 221),
-      0 0 5px rgb(230, 0, 219),
-      0 0px rgb(24, 142, 211);
-  }
-
-  20%,
-  24%,
-  55% {
-    box-shadow: none;
-  }
-}
-
-@keyframes aboutBox2 {
-  0%,
-  18%,
-  22%,
-  25%,
-  53%,
-  57%,
-  100% {
-    box-shadow:
-      0 0 1px #fff,
-      /* 0 0 11px #fff, */
-      /* 0 0 5px #fff, */
-      /* 0 0 5px #580768, */
-      /* 0 0 8px #470547, */
-      /* 0 0 20px #5f0658, */
-      0 0 10px #df00f3,
-      0 0 5px #580572;
-  }
-
-  20%,
-  24%,
-  55% {
-    box-shadow: none;
-  }
-}
-
-@keyframes aboutBox3 {
-  0%,
-  18%,
-  22%,
-  25%,
-  53%,
-  57%,
-  100% {
-    box-shadow:
-      0 0 2px #fff,
-      /* 0 0 11px #fff,  */
-      /* 0 0 5px #fff, */
-      0 0 5px #7b0680,
-      0 0 8px #740461,
-      0 0 20px #810667,
-      /* 0 0 10px #860275,  */
-      0 0 5px #770267;
-  }
-
-  20%,
-  24%,
-  55% {
-    box-shadow: none;
-  }
-}
-
-@keyframes aboutBox4 {
-  0%,
-  18%,
-  22%,
-  25%,
-  53%,
-  57%,
-  100% {
-    box-shadow:
-      0 0 4px rgb(230, 6, 211),
-      0 0 11px rgb(220, 0, 240),
-      0 0 5px rgb(220, 0, 240),
-      0 0 5px rgb(220, 0, 240),
-      0 0 8px rgb(220, 0, 240),
-      0 0 20px rgb(220, 0, 240),
-      0 0 10px rgb(220, 0, 240),
-      0 0 5px rgb(217, 0, 236);
-  }
-
-  20%,
-  24%,
-  55% {
-    box-shadow: none;
-  }
-}
 
 @keyframes rotatingCircle {
   /* 0%, */
@@ -267,42 +91,7 @@
   }
 }
 
-@keyframes rotatingCircle2 {
-  /* 0%, */
-  30% {
-    box-shadow:
-      0 0 4px #fff,
-      0 0 20px rgb(25, 0, 255),
-      0 0 10px #1800f3,
-      0 0 40px #1c04a5,
-      0 0 12px #5735d1,
-      0 0 5px #ffffff;
-  }
 
-  70% {
-    box-shadow: none;
-  }
-}
-
-@keyframes rotatingCircle3 {
-  0%,
-  10%,
-  50%,
-  70% {
-    box-shadow:
-      0 0 4px #fff,
-      0 0 20px rgb(225, 0, 255),
-      0 0 10px #8600f3,
-      0 0 40px #df00f3,
-      0 0 12px #f300f3,
-      0 0 5px #ffffff;
-  }
-
-  60%,
-  100% {
-    box-shadow: none;
-  }
-}
 
 @keyframes shake {
   5%,
@@ -368,33 +157,6 @@
   }
 }
 
-@keyframes test {
-  10%,
-  18%,
-  57%,
-  100% {
-    box-shadow:
-      0 0 2px rgb(15, 188, 211),
-      0 0 6px rgb(251, 255, 0),
-      0 0 7px rgb(21, 255, 0),
-      0 0 8px rgb(195, 0, 221),
-      0 0 17px rgb(0, 4, 230),
-      0 1px rgb(211, 24, 24);
-  }
-
-  0%,
-  20%,
-  40%,
-  80% {
-    box-shadow:
-      0 0 2px rgb(238, 20, 20),
-      0 0 12px rgb(157, 207, 19),
-      0 0 7px rgb(0, 225, 255),
-      0 0 9px rgb(165, 41, 182),
-      0 0 10px rgb(255, 255, 255),
-      0 3px rgb(0, 255, 13);
-  }
-}
 
 @keyframes neonButton1{
   0%{

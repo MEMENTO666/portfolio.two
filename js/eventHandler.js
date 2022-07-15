@@ -116,15 +116,15 @@ const tapeImageMap = {
   ],
 
   'tapeBox2': [
-    '../css/asset/tape4.png',
-    '../css/asset/tape5.png',
-    '../css/asset/tape6.png',
+    '../css/asset/tape1.png',
+    '../css/asset/tape2.png',
+    '../css/asset/tape3.png',
   ],
 
   'tapeBox3': [
-    '../css/asset/tape7.png',
-    '../css/asset/tape8.png',
-    '../css/asset/tape9.png',
+    '../css/asset/tape1.png',
+    '../css/asset/tape2.png',
+    '../css/asset/tape3.png',
   ],
 };
 
@@ -132,7 +132,7 @@ const tapeImageMap = {
 const createTapeBox = (parent, boxName, tapeWidth, tapeHeight) => {
   const tapeBox = document.createElement("div");
   tapeBox.id = boxName;
-  tapeBox.style.width = "20%";
+  tapeBox.style.width = "30%";
   tapeBox.style.height = "80%";
   // tapeBox.style.backgroundColor = "pink";
   tapeBox.style.display = "flex";
@@ -150,12 +150,13 @@ const createTapeBox = (parent, boxName, tapeWidth, tapeHeight) => {
     const frame = document.createElement('div');
     frame.id = boxName + '_frame_' + i.toString();
     // frame.style.width = `${tapeWidth}px`;
-    frame.style.width = "220px";
-    frame.style.height = `${tapeHeight}px`;
+    frame.style.width = "200px";
+    frame.style.height = "30px";
     // frame.style.border = "1px solid black"; // remove later
     frame.style.transformStyle = 'preserve-3d'; // 3d값 그대로 전달
     frame.style.perspective = '11px';
-    frame.style.marginTop = "1px";
+    // frame.style.marginTop = "1px";
+
     console.log(frame.id);
     
     // 실제로 이동하는 애니메이션을 구현 할 tape 생성, frame이라는 위치에서 이동함.
@@ -165,7 +166,7 @@ const createTapeBox = (parent, boxName, tapeWidth, tapeHeight) => {
     // realTape.style.width = `${tapeWidth}px`;
     realTape.style.width = "100%";
     realTape.style.height = `${tapeHeight}px`;
-    realTape.style.backgroundColor = 'cyan';
+    // realTape.style.backgroundColor = 'cyan';
     realTape.style.transition = '0.6s';
     realTape.style.position = 'absolute';
     realTape.style.cursor = "pointer";
